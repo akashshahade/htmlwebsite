@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy 3 Months – Akash ❤️ Minal</title>
+  <meta name="description" content="A desi-style celebration page with marigolds, diyas, music, and memories." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Yeseva+One&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#FFF6E5; --orange:#FF8A00; --orange-deep:#E65100; --yellow:#FFC107; --red:#C21807; --teal:#006D77; --blue:#0C2D57; --text:#2A2A2A; --card:#FFFFFFEE; --border:#FFB300; --shadow: 0 10px 30px rgba(0,0,0,.12);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Poppins,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+    img{max-width:100%;display:block}
+    body:before, body:after{content:"";position:fixed;inset:0;pointer-events:none;border:14px solid transparent;border-image:linear-gradient(90deg,var(--orange) 0%,var(--yellow) 50%,var(--red) 100%) 1; border-radius:18px}
+    .garlands{position:fixed;top:0;left:0;right:0;height:110px;display:flex;justify-content:center;gap:18px;pointer-events:none;z-index:1}
+    .marigold{width:24px;height:100px;background:repeating-linear-gradient( to bottom, #FFB300 0 10px, #FF7A00 10px 20px ); border-radius:16px; box-shadow:0 2px 0 rgba(0,0,0,.2) inset}
+    header.hero{position:relative;min-height:88vh;padding:120px 20px 40px;display:grid;place-items:center;text-align:center;overflow:hidden}
+    .title{font-family:"Yeseva One", serif;color:var(--blue);font-size:clamp(32px,7vw,64px);letter-spacing:.5px;text-shadow:0 4px 0 rgba(255,193,7,.35)}
+    .subtitle{font-size:clamp(16px,3.8vw,22px);margin:.4rem 0 1rem;color:var(--red);font-weight:600}
+    .names{font-family:"Yeseva One",serif;color:var(--orange-deep);font-size:clamp(20px,4.8vw,32px)}
+    .hero-card{position:relative;z-index:2;max-width:900px;width:100%;background:var(--card);backdrop-filter: blur(4px);border:3px dashed var(--border);border-radius:22px;box-shadow:var(--shadow);padding:22px}
+    .petals{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+    .petal{position:absolute;top:-60px;width:18px;height:12px;background:radial-gradient(ellipse at center, #FFB300 0%, #FF7A00 70%, #D84315 100%);border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;opacity:.85;filter:drop-shadow(0 4px 3px rgba(0,0,0,.15));animation: fall linear infinite}
+    @keyframes fall{to{transform:translate3d(var(--x,0),110vh,0) rotate(360deg)}}
+    .counter{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:14px 0 8px}
+    .unit{background:linear-gradient(180deg,#fff, #FFF5D7);border:2px solid var(--border);min-width:88px;border-radius:14px;padding:10px 12px;box-shadow:var(--shadow)}
+    .unit .num{display:block;font-family:"Yeseva One",serif;font-size:26px;color:var(--blue)}
+    .unit .lbl{font-size:12px;color:#7A5A00;letter-spacing:.7px;text-transform:uppercase}
+    .controls{margin-top:10px;display:flex;justify-content:center;gap:12px}
+    button.play{background:var(--orange);border:none;color:#fff;font-weight:700;border-radius:999px;padding:10px 18px;box-shadow:var(--shadow);cursor:pointer}
+    button.play:hover{filter:brightness(.95)}
+    section.gallery{padding:30px 18px 80px;position:relative}
+    .gallery .card{max-width:900px;margin:0 auto;background:#fff;border-radius:22px;border:3px solid var(--border);box-shadow:var(--shadow);overflow:hidden}
+    .caption{padding:14px 16px;background:linear-gradient(90deg,#FFF3CD,#FFE082);font-weight:600;color:#6A4B00}
+    section.poem{padding:24px 18px 60px}
+    .poem .card{max-width:900px;margin:0 auto;background:var(--card);border:3px dashed var(--border);border-radius:22px;box-shadow:var(--shadow);padding:20px}
+    .poem h3{margin:0 0 8px;font-family:"Yeseva One",serif;color:var(--red)}
+    .poem p{margin:6px 0;font-size:18px}
+    .diyas{position:fixed;left:0;right:0;bottom:12px;display:flex;gap:14px;justify-content:center;pointer-events:none;z-index:1}
+    .diya{width:44px;height:44px;position:relative;animation: float 6s ease-in-out infinite}
+    .diya:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 70%, #D2691E 0 40%, #8D4B10 41% 100%);border-radius:50%}
+    .flame{position:absolute;left:50%;top:6px;transform:translateX(-50%);width:10px;height:18px;background:radial-gradient(circle at 50% 30%, #fff 0 25%, #FFD54F 26% 60%, #FF8F00 61% 100%);border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;filter:blur(.2px)}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+    footer{padding:30px 10px 60px;text-align:center;color:#6B4F00;font-size:14px}
+    .heart{color:var(--red)}
+    @media (max-width:480px){.unit{min-width:70px}.diya{width:36px;height:36px}}
+  </style>
+</head>
+<body>
+  <div class="garlands" aria-hidden="true">
+    <div class="marigold"></div>
+    <div class="marigold" style="height:120px"></div>
+    <div class="marigold"></div>
+    <div class="marigold" style="height:130px"></div>
+    <div class="marigold"></div>
+  </div>
+
+  <header class="hero">
+    <div class="petals" id="petals" aria-hidden="true"></div>
+    <div class="hero-card">
+      <div class="subtitle">Happy 3 Months to Us</div>
+      <h1 class="title">Akash <span class="heart">❤️</span> Minal</h1>
+      <div class="names">Together since 28 June 2025</div>
+      <div class="counter" id="counter" aria-live="polite"></div>
+      <div class="controls">
+        <button class="play" id="playBtn" aria-controls="bgm">Play Music</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="gallery" id="gallery">
+    <div class="card">
+      <img src="assets/couple.png" alt="Akash and Minal smiling together" />
+      <div class="caption">Three months of your laughter, my favorite place. 💛</div>
+    </div>
+  </section>
+
+  <section class="poem">
+    <div class="card">
+      <h3>For Minal</h3>
+      <p>Meethi si muskaan, sabka khayal — that’s you.</p>
+      <p>Hardworking dil, masoom si baatein — sach much cute.</p>
+      <p>Horror dekhtey huey haath thamna — our ritual.</p>
+      <p>Always wins in Ludo — mujhe hamesha hara deti ho. 🎲</p>
+      <p>Rasgulla jaisi khushiyan — tum perfect ho, truly beautiful.</p>
+    </div>
+  </section>
+
+  <div class="diyas" aria-hidden="true">
+    <div class="diya"><div class="flame"></div></div>
+    <div class="diya" style="animation-delay:.7s"><div class="flame"></div></div>
+    <div class="diya" style="animation-delay:1.4s"><div class="flame"></div></div>
+    <div class="diya" style="animation-delay:2.1s"><div class="flame"></div></div>
+  </div>
+
+  <footer>
+    Made with <span class="heart">❤</span> by Akash — 3 months and counting.
+  </footer>
+
+  <audio id="bgm" src="assets/music.mp3" preload="auto"></audio>
+
+<script>
+  const startDate = new Date('2025-06-28T00:00:00');
+  const counterEl = document.getElementById('counter');
+  function updateCounter(){
+    const now = new Date();
+    let diff = Math.max(0, now - startDate);
+    const days = Math.floor(diff / (24*60*60*1000)); diff -= days*24*60*60*1000;
+    const hours = Math.floor(diff / (60*60*1000)); diff -= hours*60*60*1000;
+    const mins = Math.floor(diff / (60*1000)); diff -= mins*60*1000;
+    const secs = Math.floor(diff / 1000);
+    counterEl.innerHTML = `
+      <div class="unit"><span class="num">${days}</span><span class="lbl">Days</span></div>
+      <div class="unit"><span class="num">${hours}</span><span class="lbl">Hours</span></div>
+      <div class="unit"><span class="num">${mins}</span><span class="lbl">Minutes</span></div>
+      <div class="unit"><span class="num">${secs}</span><span class="lbl">Seconds</span></div>
+    `;
+  }
+  updateCounter();
+  setInterval(updateCounter, 1000);
+
+  const audio = document.getElementById('bgm');
+  const playBtn = document.getElementById('playBtn');
+  let isPlaying = false;
+  playBtn.addEventListener('click', async () => {
+    try{
+      if(!isPlaying){ await audio.play(); isPlaying = true; playBtn.textContent = 'Pause Music'; }
+      else{ audio.pause(); isPlaying = false; playBtn.textContent = 'Play Music'; }
+    }catch(e){ console.log(e); }
+  });
+
+  const petalContainer = document.getElementById('petals');
+  const PETAL_COUNT = 26;
+  function spawnPetals(){
+    for(let i=0;i<PETAL_COUNT;i++){
+      const p = document.createElement('span');
+      p.className='petal';
+      const startX = Math.random()*100;
+      const drift = (Math.random()*60 - 30) + 'vw';
+      const delay = Math.random()*-8 + 's';
+      const dur = (8 + Math.random()*8) + 's';
+      p.style.left = startX + 'vw';
+      p.style.animationDuration = dur;
+      p.style.animationDelay = delay;
+      p.style.setProperty('--x', drift);
+      petalContainer.appendChild(p);
+    }
+  }
+  spawnPetals();
+</script>
+</body>
+</html>
